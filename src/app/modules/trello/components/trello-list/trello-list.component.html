@@ -1,0 +1,10 @@
+<ng-container *ngIf="model$ | async as model">
+  <div class="form">
+    <div class="block" *ngIf="!!model.assignedForMe.length">
+      <h2>All tasks</h2>
+      <ul>
+        <li type="circle" *ngFor="let task of model.assignedForMe">{{ task | json }}</li>
+      </ul>
+    </div>
+  </div>
+  </ng-container>
